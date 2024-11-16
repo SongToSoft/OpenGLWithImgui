@@ -1,1 +1,1 @@
-![example](https://github.com/SongToSoft/OpenGLWithImgui/blob/main/Img/colorPicker.png)
+![example](https://github.com/SongToSoft/OpenGLWithImgui/blob/main/img/colorPicker.png)
