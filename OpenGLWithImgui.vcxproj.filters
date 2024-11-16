@@ -19,6 +19,12 @@
     <Filter Include="imgui\backends">
       <UniqueIdentifier>{db55381d-3764-4a03-ac22-225deefabeb0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="openGL">
+      <UniqueIdentifier>{beb414c6-d5ef-4d2f-ab3c-a5308015db01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="openGL\GLFW">
+      <UniqueIdentifier>{7612e68b-eea4-406b-a016-d02cc8220fb6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -76,6 +82,12 @@
     </ClInclude>
     <ClInclude Include="imguiTestWindow.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="openGL\include\GLFW\glfw3.h">
+      <Filter>openGL\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="openGL\include\GLFW\glfw3native.h">
+      <Filter>openGL\GLFW</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,15 +4,22 @@
 #include <imgui/backends/imgui_impl_opengl3.h>
 
 
-int showImguiTestWindow(GLFWwindow* window)
-{
-	//IMGUI_CHECKVERSION();
-	//ImGui::CreateContext();
-	//ImGuiIO& io = ImGui::GetIO();
-	//// Setup Platform/Renderer bindings
-	//ImGui_ImplGlfw_InitForOpenGL(window, true);
-	////ImGui_ImplOpenGL3_Init(glsl_version);
-	//// Setup Dear ImGui style
-	//ImGui::StyleColorsDark();
-	return 0;
-}
+class ImguiTestWindow {
+public:
+	void Render(std::vector<GLfloat> & triangleColor)
+	{
+		// feed inputs to dear imgui, start new frame
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+		// render your GUI
+		ImGui::Begin("Demo window");
+		ImGui::ColorPicker3("ColorPicker3", triangleColor.data());
+		ImGui::End();
+
+		// Render dear imgui into screen
+		ImGui::Render();
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+	}
+};
